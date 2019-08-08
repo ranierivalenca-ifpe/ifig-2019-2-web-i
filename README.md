@@ -8,7 +8,7 @@ Os códigos não serão naturalmente comentados, mas sintam-se à vontade para e
 ## Sobre a disciplina
 
 ### Quais linguagens preciso saber?
-Para começar, nesta disciplina você **precisa** saber *HTML*. Um pouco cd *CSS* também é bom, apesar de vermos um tiquinho na disciplina.
+Para começar, nesta disciplina você **precisa** saber *HTML*. Um pouco cd *CSS* também é bom, apesar de vermos um tiquinho na disciplina. Você também precisa compreender como funciona o modelo *cliente-servidor*, além de conhecer o protocolo *HTTP*.
 
 ### O que devo aprender nesta disciplina?
 Esta disciplina trata de conceitos de CRUD (Create, Read, Update, Delete), as operações mais básicas em uma Aplicação Web, na linguagem [**PHP**](https://php.net) (PHP Hyper Processor). Além disso, trabalhamos com **JavaScript** para front-end, passando por conceitos de DOM (Document Object Model), algumas coisas de [jquery](https://jquery.com), um pouco de ECMAScript 6 ([ref1](https://www.w3schools.com/js/js_es6.asp), [ref2](http://es6-features.org/)) e algum framework de aplicações web reativas ([React](https://pt-br.reactjs.org/), [Vue](https://vuejs.org/), [Ember](https://emberjs.com/) ou algum similar).
