@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Table</title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+        :root {
+            --main-color: 150;
+        }
+        h1 {
+            text-align: center;
+            color: hsl(var(--main-color), 80%, 30%);
+        }
+        table {
+            margin: auto;
+        }
+        .zebra, .zebra td, .zebra th {
+            border: 1px solid #AAA;
+            border-collapse: collapse;
+        }
+        .zebra td, .zebra th {
+            padding: .3em;
+            text-align: center;
+        }
+
+        .zebra tr:nth-child(2n) {
+            background: hsl(var(--main-color), 80%, 90%);
+        }
+    </style>
+</head>
+<body>
+    <h1>This is a table</h1>
+    <table class="zebra">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Mireya</td>
+            <td>Cornea</td>
+            <td>Guinea-Bissau</td>
+        </tr>
+        <tr>
+            <td>Daren</td>
+            <td>Chesney</td>
+            <td>Mongolia</td>
+        </tr>
+        <tr>
+            <td>Kiara</td>
+            <td>Kaplowitz</td>
+            <td>Montenegro</td>
+        </tr>
+        <tr>
+            <td>Delta</td>
+            <td>Quinalty</td>
+            <td>Seychelles</td>
+        </tr>
+        <tr>
+            <td>Beau</td>
+            <td>Arleth</td>
+            <td>Morocco</td>
+        </tr>
+        <tr>
+            <td>Keila</td>
+            <td>Mcsharry</td>
+            <td>Central African Republic</td>
+        </tr>
+        <tr>
+            <td>Vannesa</td>
+            <td>Flora</td>
+            <td>Sri Lanka</td>
+        </tr>
+        <tr>
+            <td>Alease</td>
+            <td>Neri</td>
+            <td>Thailand</td>
+        </tr>
+        <tr>
+            <td>Kent</td>
+            <td>Mcmanamy</td>
+            <td>Haiti</td>
+        </tr>
+        <tr>
+            <td>Santa</td>
+            <td>Weldy</td>
+            <td>Nicaragua</td>
+        </tr>
+    </table>
+</body>
+</html>
