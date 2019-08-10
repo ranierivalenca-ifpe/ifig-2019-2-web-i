@@ -1,6 +1,6 @@
 # Aula inicial
 
-Os slides estão disponíveis neste repositório. Lá tem algumas informações sobre a disciplina. Estas informações também serão disponibilizadas e atualizadas no README inicial deste respositório.
+Os slides estão disponíveis neste repositório. Lá tem algumas informações sobre a disciplina. Estas informações também serão disponibilizadas e atualizadas no README inicial deste repositório.
 
 ## Pequena revisão de HTML e CSS
 
