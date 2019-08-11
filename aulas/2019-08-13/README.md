@@ -165,6 +165,66 @@ Neste exemplo também podemos ver a utilização de comentários, utilizando `//
 
 Além de podermos criar nossas próprias funções, o PHP tem uma quantidade *gigantesca* de funções pré-definidas, para trabalhar com [strings](https://www.php.net/manual/pt_BR/ref.strings.php), [arrays](https://www.php.net/manual/pt_BR/ref.array.php), [datas](https://www.php.net/manual/pt_BR/ref.datetime.php), arquivos (assunto da próxima aula), banco de dados, ... Vale *muito a pena* estudar tais funções, portanto leiam as documentações.
 
+## Verificando o conteúdo de variáveis
+
+A função `echo` é utilizada para escrever o conteúdo de variáveis, mas é diferente da função `console.log()` do JavaScript. Enquanto esta escreve o conteúdo de qualquer tipo de dados, a função `echo` escreve apenas o conteúdo de tipos de dados simples:
+```php
+<?php
+$string = 'nome';
+$numero = 1101;
+$float = 1.92;
+$array = [1, 1, 2, 3, 5, 8, 11];
+
+echo $string . PHP_EOL; // imprime "nome\n" =)
+echo $numero . PHP_EOL; // imprime "1101\n" =)
+echo $float . PHP_EOL; // imprime "1.92\n" =)
+echo $array . PHP_EOL; // imprime "array\n"  =(
+?>
+```
+
+Para escrever o conteúdo de arrays e objetos, podemos utilizar as funções `print_r()` ou `var_dump()`:
+```php
+<?php
+$array = [1, 1, 2, 3, 5, 8, 11];
+
+print_r($array);
+/*
+Array
+(
+    [0] => 1
+    [1] => 1
+    [2] => 2
+    [3] => 3
+    [4] => 5
+    [5] => 8
+    [6] => 11
+)
+*/
+
+var_dump($array);
+/*
+array(7) {
+  [0]=>
+  int(1)
+  [1]=>
+  int(1)
+  [2]=>
+  int(2)
+  [3]=>
+  int(3)
+  [4]=>
+  int(5)
+  [5]=>
+  int(8)
+  [6]=>
+  int(11)
+}
+*/
+?>
+```
+
+Enquanto `print_r()` imprime os dados de uma forma mais simplificada e mais fácil de ser entendida, ela dá menos detalhes sobre o conteúdo do array. Por isso, é importante ter ciência da função `var_dump()` e de como utilizá-la.
+
 ## Referências e mais conteúdos
 
 Para saber mais sobre os tópicos aqui explanados e **muito mais**, consulte a documentação do PHP, nos links abaixo:
