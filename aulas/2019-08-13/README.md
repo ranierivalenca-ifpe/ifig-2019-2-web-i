@@ -75,3 +75,105 @@ Mas esta sintaxe traz um problema ao PHP quando integrado ao HTML (função para
 ```
 
 Note neste exemplo também o uso da sintaxe `<?= $i ?>`. Esta é uma outra sintaxe abreviada dos delimitadores de PHP, que é a mesma coisa que `<?php echo $i; ?>`, para facilitar a escrita de variáveis dentro de códigos HTML.
+
+## Arrays em PHP
+
+Em PHP, arrays podem ser declarados usando a função `array()` ou utilizando os tradicionais colchetes (`[]`). O exemplo a seguir declara dois arrays, nas duas sintaxes:
+```php
+<?php
+    $gastos = array(
+        'combustível', // índice 0
+        'diária',      // índice 1
+        'almoço',      // índice 2
+        'jantar'       // índice 3
+    );
+
+    $valores = [
+        200, // índice 0
+        200, // índice 1
+        100, // índice 2
+        120  // índice 3
+    ];
+?>
+<h1>Gastos com a viagem</h1>
+<h2>Tipos</h2>
+<ul>
+    <?php for ($i = 0; $i < sizeof($gastos); $i++): ?>
+        <li><?= $gastos[$i] ?></li>
+    <?php endfor ?>
+</ul>
+<h2>Valores</h2>
+<ul>
+    <?php foreach ($valores as $valor): ?>
+        <li><?= $valor ?></li>
+    <?php endforeach ?>
+</ul>
+```
+
+O exemplo anterior mostra também como é possível *ler* os dados de um array, utilizando os operadores `[]`, e como contar o número de elementos de um array, utilizando a função `sizeof()` (funções serão melhor descritas a seguir). Neste exemplo também é mostrada a estrutura de controle **`foreach`**, extremamente importante no PHP. O `foreach` substitui, de certa forma, o `for`, na medida que lê cada elemento do array e coloca-o dentro de uma variável. No exemplo, cada um dos valores dentro da variável `$valores` é colocado na variável `$valor`, que existe dentro do contexto da estrutura de controle.
+
+PHP também aceita arrays *indexados*, onde os índices podem ser inteiros ou strings. Para declarar um array indexado, utilizamos o operador `=>`, conforme o exemplo a seguir:
+```php
+<?php
+    $herois = [
+        'Iron Main' => 'Tony Esterco',
+        'Hook' => 'Bruce Gancho',
+        'Gavião Roqueiro' => 'Clin Tim Barton'
+    ];
+
+    echo "<ul>";
+    foreach ($herois as $nomeDeHeroi => $nomeReal) {
+        echo "<li>$nomeReal é $nomeDeHeroi</li>"
+    }
+    echo "</ul>";
+?>
+```
+
+Neste exemplo vemos também como `foreach` pode ser utilizado para navegar por arrays indexados, tendo acesso também ao seu índice. A cada iteração do `foreach`, o índice é colocado na variável `$nomeDeHeroi` o valor respectivo é colocado na variável `$nomeReal`.
+
+## Funções em PHP
+
+PHP é uma linguagem *multiparadigma*, que suporta recursos dos paradigmas imperativo, orientado a objetos e, em menor grau, funcional. E como toda linguagem imperativa, podemos escrever nossas próprias funções. A forma mais simples de fazer isso é utilizando a palavra `function`, seguida do nome da função, parênteses com os parâmetros dentro deles, e um bloco de código (bastante similar a JavaScript). A seguir, um exemplo de função em PHP:
+
+```php
+<?php
+    // ...
+    function status($nota) {
+        if ($nota >= 6) {
+            return 'aprovado';
+        } else if ($nota >= 2) {
+            return 'final';
+        }
+        return 'reprovado';
+    }
+
+    function soma($values) {
+        $soma = 0;
+        foreach($values as $val) {
+            $soma = $soma + $val;
+        }
+        return $soma;
+    }
+    // ...
+
+    $arr = [1, 1, 2, 3, 5, 8, 11, 19, 30, 49, 79, 128];
+    echo "a soma dos valores eh " . soma($arr);
+?>
+```
+
+Neste exemplo também podemos ver a utilização de comentários, utilizando `//`. Comentários em PHP também podem ser começados por `#`. Para comentários de bloco, utilizamos `/* ... */`, similar também a JavaScript.
+
+## Referências e mais conteúdos
+
+Para saber mais sobre os tópicos aqui explanados e **muito mais**, consulte a documentação do PHP, nos links abaixo:
+- https://www.php.net/manual/pt_BR/language.basic-syntax.php
+- https://www.php.net/manual/pt_BR/language.types.php
+- https://www.php.net/manual/pt_BR/language.variables.php
+- https://www.php.net/manual/pt_BR/language.expressions.php
+- https://www.php.net/manual/pt_BR/language.operators.arithmetic.php
+- https://www.php.net/manual/pt_BR/language.operators.comparison.php
+- https://www.php.net/manual/pt_BR/language.operators.string.php
+- https://www.php.net/manual/pt_BR/language.operators.array.php
+- https://www.php.net/manual/pt_BR/language.control-structures.php
+- https://www.php.net/manual/pt_BR/language.types.array.php
+- https://www.php.net/manual/pt_BR/language.functions.php
