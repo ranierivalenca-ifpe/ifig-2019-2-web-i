@@ -20,6 +20,12 @@ O professor estará disponível semanalmente no Campus, além dos horários das 
 
 ### Como será a avaliação?
 
+A disciplina, assim como deve ser, será dividida em duas unidades, e a média final será a média aritmética das médias das unidades.
+
+A primeira unidade terá duas notas: uma virá das notas dos exercícios [quase] semanais da disciplina. A outra virá de uma avaliação individual, com consulta, realizada numa data a ser definida. Os detalhes da correção dos exercícios, cálculo para notas dos exercícios e método da avaliação serão divulgados oportunamente.
+
+A nota da segunda unidade virá de um projeto que será realizado junto com a disciplina de *Programação Orientada a Objetos*. Os detalhes serão divulgados em algum momento entre final de outubro/2019 e novembro/2019. De forma geral, o projeto consistirá na construção de um WebService (a ser construído em POO) e uma interface de acesso (a ser construída nesta disciplina). Esta interface deverá ser construída em PHP ou JavaScript, a critério da equipe.
+
 ## FAQ
 
 ### Como rodar uma aplicação PHP?
