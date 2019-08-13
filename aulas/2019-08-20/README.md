@@ -1,5 +1,37 @@
 # Funções em PHP
 
+PHP é uma linguagem *multiparadigma*, que suporta recursos dos paradigmas imperativo, orientado a objetos e, em menor grau, funcional. E como toda linguagem imperativa, podemos escrever nossas próprias funções. A forma mais simples de fazer isso é utilizando a palavra `function`, seguida do nome da função, parênteses com os parâmetros dentro deles, e um bloco de código (bastante similar a JavaScript). A seguir, um exemplo de função em PHP:
+
+```php
+<?php
+    // ...
+    function status($nota) {
+        if ($nota >= 6) {
+            return 'aprovado';
+        } else if ($nota >= 2) {
+            return 'final';
+        }
+        return 'reprovado';
+    }
+
+    function soma($values) {
+        $soma = 0;
+        foreach($values as $val) {
+            $soma = $soma + $val;
+        }
+        return $soma;
+    }
+    // ...
+
+    $arr = [1, 1, 2, 3, 5, 8, 11, 19, 30, 49, 79, 128];
+    echo "a soma dos valores eh " . soma($arr);
+?>
+```
+
+Neste exemplo também podemos ver a utilização de comentários, utilizando `//`. Comentários em PHP também podem ser começados por `#`. Para comentários de bloco, utilizamos `/* ... */`, similar também a JavaScript.
+
+Além de podermos criar nossas próprias funções, o PHP tem uma quantidade *gigantesca* de funções pré-definidas, para trabalhar com [strings](https://www.php.net/manual/pt_BR/ref.strings.php), [arrays](https://www.php.net/manual/pt_BR/ref.array.php), [datas](https://www.php.net/manual/pt_BR/ref.datetime.php), arquivos (assunto da próxima aula), banco de dados, ... Vale *muito a pena* estudar tais funções, portanto leiam as documentações.
+
 # Leitura e escrita de arquivos em PHP
 
 Para se trabalhar com arquivos em uma linguagem de programação, é importante entender o conceito de *handler*, ou ***manipulador***. Um manipulador de arquivo é uma variável cujo valor é uma *referência* para o sistema de arquivos do computador, de forma que, com essa variável, é possível ler ou escrever naquele arquivo.
@@ -86,3 +118,7 @@ for($i = 0; $i < sizeof($linhas); $i++) {
 ```
 
 Note o uso da função `trim()`, que serve para "limpar" a string, "aparando" os espaços em branco antes e depois dela. Por exemplo, `trim("  abc \n")` resultaria na string `abc` simplesmente, sem os espaços antes nem depois (incluindo a quebra de linha). Esse processo não é *necessário* para o exemplo em questão, visto que o HTML ignora espaços em branco, mas em outros será importante.
+
+## Referências de mais conteúdos
+
+- https://www.php.net/manual/pt_BR/language.functions.php

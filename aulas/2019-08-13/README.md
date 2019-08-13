@@ -131,40 +131,6 @@ PHP também aceita arrays *indexados*, onde os índices podem ser inteiros ou st
 
 Neste exemplo vemos também como `foreach` pode ser utilizado para navegar por arrays indexados, tendo acesso também ao seu índice. A cada iteração do `foreach`, o índice é colocado na variável `$nomeDeHeroi` o valor respectivo é colocado na variável `$nomeReal`.
 
-## Funções em PHP
-
-PHP é uma linguagem *multiparadigma*, que suporta recursos dos paradigmas imperativo, orientado a objetos e, em menor grau, funcional. E como toda linguagem imperativa, podemos escrever nossas próprias funções. A forma mais simples de fazer isso é utilizando a palavra `function`, seguida do nome da função, parênteses com os parâmetros dentro deles, e um bloco de código (bastante similar a JavaScript). A seguir, um exemplo de função em PHP:
-
-```php
-<?php
-    // ...
-    function status($nota) {
-        if ($nota >= 6) {
-            return 'aprovado';
-        } else if ($nota >= 2) {
-            return 'final';
-        }
-        return 'reprovado';
-    }
-
-    function soma($values) {
-        $soma = 0;
-        foreach($values as $val) {
-            $soma = $soma + $val;
-        }
-        return $soma;
-    }
-    // ...
-
-    $arr = [1, 1, 2, 3, 5, 8, 11, 19, 30, 49, 79, 128];
-    echo "a soma dos valores eh " . soma($arr);
-?>
-```
-
-Neste exemplo também podemos ver a utilização de comentários, utilizando `//`. Comentários em PHP também podem ser começados por `#`. Para comentários de bloco, utilizamos `/* ... */`, similar também a JavaScript.
-
-Além de podermos criar nossas próprias funções, o PHP tem uma quantidade *gigantesca* de funções pré-definidas, para trabalhar com [strings](https://www.php.net/manual/pt_BR/ref.strings.php), [arrays](https://www.php.net/manual/pt_BR/ref.array.php), [datas](https://www.php.net/manual/pt_BR/ref.datetime.php), arquivos (assunto da próxima aula), banco de dados, ... Vale *muito a pena* estudar tais funções, portanto leiam as documentações.
-
 ## Verificando o conteúdo de variáveis
 
 A função `echo` é utilizada para escrever o conteúdo de variáveis, mas é diferente da função `console.log()` do JavaScript. Enquanto esta escreve o conteúdo de qualquer tipo de dados, a função `echo` escreve apenas o conteúdo de tipos de dados simples:
@@ -238,4 +204,3 @@ Para saber mais sobre os tópicos aqui explanados e **muito mais**, consulte a d
 - https://www.php.net/manual/pt_BR/language.operators.array.php
 - https://www.php.net/manual/pt_BR/language.control-structures.php
 - https://www.php.net/manual/pt_BR/language.types.array.php
-- https://www.php.net/manual/pt_BR/language.functions.php
