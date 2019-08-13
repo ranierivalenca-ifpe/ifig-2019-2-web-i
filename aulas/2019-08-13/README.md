@@ -36,7 +36,7 @@ Neste outro exemplo, pode-se ver a utilização de variáveis e o processo de co
 
 Primeiro, **o nome de qualquer variável inicia com o símbolo `$`**. Após o `$`, segue-se a regra normal de linguagens *C-like* (primeiro caractere precisa ser uma letra ou `_` e os caracteres seguintes podem ser letras, números ou `_`). Outra diferença importante é o **operador de concatenação de PHP ser o caractere `.`**.
 
-Além disso, em importante salientar que em PHP strings podem ser descritas entre aspas simples (`''`) ou aspas duplas (`""`) (há ainda outros detalhes sobre strings, que podem ser vistos [aqui](https://www.php.net/manual/pt_BR/language.types.string.php)). A diferença basicamente consiste no fato de que strings delimitadas por aspas duplas *tentam interpretar variáveis que estejam dentro delas*, enquanto strings delimitadas por aspas simples não. Então, o exemplo a seguir tem o mesmo resultado que o anterior:
+Além disso, em importante salientar que em PHP strings podem ser descritas entre aspas simples (`''`) ou aspas duplas (`""`) (há ainda outros detalhes sobre strings, que podem ser vistos [aqui](https://www.php.net/manual/pt_BR/language.types.string.php)). A diferença basicamente consiste no fato de que strings delimitadas por aspas duplas *tentam interpretar variáveis que estejam dentro delas* (similar às strings delimitadas por acento grave (\`\`) no JavaScript), enquanto strings delimitadas por aspas simples não. Então, o exemplo a seguir tem o mesmo resultado que o anterior:
 ```php
 <?php
     $nome = 'ranieri';
@@ -66,9 +66,13 @@ Mas esta sintaxe traz um problema ao PHP quando integrado ao HTML (função para
 <ul>
     <?php for ($i = 0; $i < 10; $i++): ?>
         <?php if ($i == 5): ?>
-            <li><strong><?= $i ?></strong></li>
+            <li>
+                <strong><?= $i ?></strong>
+            </li>
         <?php else: ?>
-            <li><?= $i ?></li>
+            <li>
+                <?= $i ?>
+            </li>
         <?php endif ?>
     <?php endfor ?>
 </ul>
@@ -110,7 +114,24 @@ Em PHP, arrays podem ser declarados usando a função `array()` ou utilizando os
 </ul>
 ```
 
-O exemplo anterior mostra também como é possível *ler* os dados de um array, utilizando os operadores `[]`, e como contar o número de elementos de um array, utilizando a função `sizeof()` (funções serão melhor descritas a seguir). Neste exemplo também é mostrada a estrutura de controle **`foreach`**, extremamente importante no PHP. O `foreach` substitui, de certa forma, o `for`, na medida que lê cada elemento do array e coloca-o dentro de uma variável. No exemplo, cada um dos valores dentro da variável `$valores` é colocado na variável `$valor`, que existe dentro do contexto da estrutura de controle.
+O exemplo anterior mostra também como é possível *ler* os dados de um array, utilizando os operadores `[]`, e como contar o número de elementos de um array, utilizando a função `sizeof()` (funções serão melhor descritas a seguir). Neste exemplo também é mostrada a estrutura de controle **`foreach`**, extremamente importante no PHP. O `foreach` substitui, de certa forma, o `for`, na medida que lê cada elemento do array e coloca-o dentro de uma variável. No exemplo, cada um dos valores dentro da variável `$valores` é colocado na variável `$valor`, que existe dentro do contexto da estrutura de controle. Os dois exemplos a seguir geram exatamente o mesmo resultado:
+```php
+<?php
+$numeros = [1, 1, 2, 3, 5, 8];
+
+for ($i = 0; $i < sizeof($numeros); $i++) {
+    $numero = $numeros[$i];
+    echo "[$numero]";
+}
+echo PHP_EOL; // imprime uma linha em branco
+foreach($numeros as $numero) {
+    echo "[$numero]";
+}
+
+ ?>
+```
+
+Neste caso, o `foreach` terá um comportamento bastante similar ao `for` apresentado, criando uma variável `$numero` para cada elemento do array `$numeros`.
 
 PHP também aceita arrays *indexados*, onde os índices podem ser inteiros ou strings. Para declarar um array indexado, utilizamos o operador `=>`, conforme o exemplo a seguir:
 ```php
