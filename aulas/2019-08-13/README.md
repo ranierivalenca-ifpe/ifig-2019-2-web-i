@@ -64,13 +64,13 @@ Como já falado, as estruturas de controle em PHP são similares a outras lingua
 Mas esta sintaxe traz um problema ao PHP quando integrado ao HTML (função para o qual foi desenvolvido): o código HTML fica misturado ao PHP, dentro de strings, diminuindo drasticamente a *manutenibilidade* do código. Assim, para resolver este problema, o PHP traz uma sintaxe alternativa, que permite que blocos de código HTML sejam separados de blocos de código PHP. No exemplo a seguir, o HTML resultante será **o mesmo do exemplo anterior**, exceto por alguns espaços extras:
 ```php
 <ul>
-    <?php for ($i = 0; i < 10; $i++): ?>
+    <?php for ($i = 0; $i < 10; $i++): ?>
         <?php if ($i == 5): ?>
             <li><strong><?= $i ?></strong></li>
         <?php else: ?>
             <li><?= $i ?></li>
         <?php endif ?>
-    <?php endif ?>
+    <?php endfor ?>
 </ul>
 ```
 
@@ -123,7 +123,7 @@ PHP também aceita arrays *indexados*, onde os índices podem ser inteiros ou st
 
     echo "<ul>";
     foreach ($herois as $nomeDeHeroi => $nomeReal) {
-        echo "<li>$nomeReal é $nomeDeHeroi</li>"
+        echo "<li>$nomeReal é $nomeDeHeroi</li>";
     }
     echo "</ul>";
 ?>
