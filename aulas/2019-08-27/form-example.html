@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            border-radius: .5em;
+        }
+        input {
+            display: block;
+            margin-bottom: .5em;
+        }
+        fieldset {
+            width: 50%;
+            margin: auto;
+            border: 1px solid #ccc;
+        }
+        fieldset > legend {
+            border: 1px solid #ccc;
+            padding: .1em 1em;
+        }
+    </style>
+</head>
+<body>
+    <form action="adicionar.php" method="POST">
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <input type="text" name="nome" placeholder="Nome">
+            <input type="text" name="sobrenome" placeholder="Sobrenome">
+            <input type="submit" value="Ok">
+        </fieldset>
+    </form>
+</body>
+</html>
