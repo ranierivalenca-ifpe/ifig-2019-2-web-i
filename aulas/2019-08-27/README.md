@@ -69,6 +69,19 @@ Três destas variáveis superglobais serão de extrema importância para o andam
 - [GET](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods/GET) - método usado para recuperar informações e solicitar arquivos.
 - [POST](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods/POST) - método usado para enviar dados maiores, sobretudo vindos de formulários.
 
+Estas variáveis comportam-se como *arrays associativos*, onde os índices são os *nomes dos dados* que foram enviados, e os valores são os valores atribuídos a estes dados. Por exemplo, na url `https://www.google.com/search?q=php&sourceid=chrome`, os dados `q` e `sourceid` estão sendo enviados via método GET (ou seja, diretamente na URL), e seus valores são `php` e `chrome` respectivamente. Este *request* está sendo feito para o arquivo `search`, hospedado no servidor `www.google.com`.
+
+Este formato de envio de dados, `nome=valor[&nome0=valor0]*` é chamado de [*query string*](https://en.wikipedia.org/wiki/Query_string), e é utilizado tanto para enviar dados via o método GET quanto POST, sendo que no caso deste último a *query string* é colocada **dentro do pacote http**.
+
+Veja o exemplo a seguir:
+```php
+<?php
+echo "Seja bem vindo, " . $_GET['nome'];
+?>
+```
+
+Se este for o conteúdo do arquivo `welcome.php`, hospedado num servidor local (sendo servido usando o servidor embutido do PHP, na porta 3000), um request para `http://localhost:3000/welcome.php?nome=Ranieri` geraria o resultado `Seja bem vindo, Ranieri`.
+
 # Trabalhando com formulários
 
 
