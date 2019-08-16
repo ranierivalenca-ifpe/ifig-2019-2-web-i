@@ -345,6 +345,8 @@ Como já dito anteriormente, PHP possui uma série de funções prontas, que sã
 #### Função para trabalhar com datas
 - [date](https://www.php.net/manual/pt_BR/function.date.php)
 
+# Referências e mais conteúdos
+
 A seguir algumas referências externas (além das que já foram citadas no texto) que contém *bem mais informação* sobre o que foi explicado aqui:
 - https://www.php.net/manual/pt_BR/language.functions.php
 - https://desenvolvimentoparaweb.com/php/funcoes-anonimas-closures-php/
