@@ -1,3 +1,16 @@
+# Tipos de dados em PHP
+
+PHP possui oito tipos de dados primitivos:
+- [boolean](https://www.php.net/manual/pt_BR/language.types.boolean.php) - valor booleano [true  false]
+- [integer](https://www.php.net/manual/pt_BR/language.types.integer.php) - valores inteiros (incluindo dados *long*)
+- [float](https://www.php.net/manual/pt_BR/language.types.float.php) - valores de ponto flutuante (incluindo dados *double*)
+- [string](https://www.php.net/manual/pt_BR/language.types.string.php) - sequências de caracteres
+- [array](https://www.php.net/manual/pt_BR/language.types.array.php) - um agrupamento de dados, de qualquer tipo
+- [object](https://www.php.net/manual/pt_BR/language.types.object.php) - objetos
+- [callable](https://www.php.net/manual/pt_BR/language.types.callable.php) - funções
+- [resource](https://www.php.net/manual/pt_BR/language.types.resource.php) - recursos externos
+- [null](https://www.php.net/manual/pt_BR/language.types.null.php) - tipo nulo
+
 # Funções em PHP
 
 PHP é uma linguagem *multiparadigma*, que suporta recursos dos paradigmas imperativo, orientado a objetos e, em menor grau, funcional. E como toda linguagem imperativa, podemos escrever nossas próprias funções. A forma mais simples de fazer isso é utilizando a palavra `function`, seguida do nome da função, parênteses com os parâmetros dentro deles, e um bloco de código (bastante similar a JavaScript). A seguir, um exemplo de função em PHP:
