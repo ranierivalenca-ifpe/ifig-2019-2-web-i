@@ -212,7 +212,7 @@ array(7) {
 
 Enquanto `print_r()` imprime os dados de uma forma mais simplificada e mais fácil de ser entendida, ela dá menos detalhes sobre o conteúdo do array. Por isso, é importante ter ciência da função `var_dump()` e de como utilizá-la.
 
-## Referências e mais conteúdos
+# Referências e mais conteúdos
 
 Para saber mais sobre os tópicos aqui explanados e **muito mais**, consulte a documentação do PHP, nos links abaixo:
 - https://www.php.net/manual/pt_BR/language.basic-syntax.php

@@ -342,7 +342,7 @@ Como já dito anteriormente, PHP possui uma série de funções prontas, que sã
 - var_dump — Mostra informações sobre a variável
 - var_export — Mostra ou retorna uma representação estruturada de uma variável
 
-## Referências e mais conteúdos
+# Referências e mais conteúdos
 
 A seguir algumas referências externas (além das que já foram citadas no texto) que contém *bem mais informação* sobre o que foi explicado aqui:
 - https://www.php.net/manual/pt_BR/language.functions.php
