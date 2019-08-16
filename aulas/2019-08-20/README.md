@@ -36,7 +36,7 @@ PHP é uma linguagem *multiparadigma*, que suporta recursos dos paradigmas imper
     }
     // ...
 
-    $arr = [1, 1, 2, 3, 5, 8, 11, 19, 30, 49, 79, 128];
+    $arr = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144];
     echo "a soma dos valores eh " . soma($arr);
 ?>
 ```
