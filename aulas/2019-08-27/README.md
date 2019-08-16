@@ -87,7 +87,7 @@ Se este for o conteúdo do arquivo `welcome.php`, hospedado num servidor local (
 Para construir Sistemas Web, é preciso que o cliente possa não apenas pedir dados e arquivos do servidor, mas que ele também seja capaz de *enviar dados* para o servidor. A forma mais comum de enviar dados a um servidor é através de **formulários em HTML**. A tag `<form><!-- ... --></form>` cria um [formulário](https://www.w3schools.com/html/html_forms.asp), e possui alguns atributos muito importantes, entre eles destacam-se `action` (a url para onde o formulário será enviado), `method` (método com o qual o *request* será enviado - `"GET"` ou `"POST"`) e `enctype` (tipo de codificação que será utilizada no pacote; este atributo geralmente é utilizado para upload de arquivos, com o valor `"multipart/form-data"`.
 
 Dentro de um formulário podem ser utilizados [alguns tipos de elementos](https://www.w3schools.com/html/html_form_elements.asp), sendo provavelmente o mais comum deles o [`<input>`](https://www.w3schools.com/html/html_form_input_types.asp). Observe o exemplo em [form-example.html](form-example.html); o formulário gerado será similar à imagem abaixo:
-![image](https://user-images.githubusercontent.com/2471326/63200808-003b0100-c059-11e9-9926-f4f83a19514e.png)
+![image](https://user-images.githubusercontent.com/2471326/63200941-89523800-c059-11e9-9022-8522cce0f155.png)
 
 
 # Referências e mais conteúdos
