@@ -43,7 +43,38 @@ PHP é uma linguagem *multiparadigma*, que suporta recursos dos paradigmas imper
 
 Neste exemplo também podemos ver a utilização de comentários, utilizando `//`. Comentários em PHP também podem ser começados por `#`. Para comentários de bloco, utilizamos `/* ... */`, similar também a JavaScript.
 
-Além de podermos criar nossas próprias funções, o PHP tem uma quantidade *gigantesca* de funções pré-definidas, para trabalhar com [strings](https://www.php.net/manual/pt_BR/ref.strings.php), [arrays](https://www.php.net/manual/pt_BR/ref.array.php), [datas](https://www.php.net/manual/pt_BR/ref.datetime.php), arquivos (assunto da próxima aula), banco de dados, ... Vale *muito a pena* estudar tais funções, portanto leiam as documentações.
+Além de podermos criar nossas próprias funções, o PHP tem uma quantidade *gigantesca* de funções pré-definidas, para trabalhar com **[strings]**(https://www.php.net/manual/pt_BR/ref.strings.php), **[arrays]**(https://www.php.net/manual/pt_BR/ref.array.php), **[datas]**(https://www.php.net/manual/pt_BR/ref.datetime.php), **[sistema de arquivos]**(https://www.php.net/manual/pt_BR/ref.filesystem.php), **[variáveis]**(https://www.php.net/manual/pt_BR/book.var.php), banco de dados, ... Vale *muito a pena* estudar tais funções, portanto leiam as documentações.
+
+## Funções anônimas
+
+Em PHP também é possível criar **funções anônimas**. Essas funções não possuem nome, e podem ser armazenadas em variáveis ou mesmo em arrays. A seguir, um exemplo de funções anônimas:
+
+```php
+<?php
+$situacao = function($nota) {
+    if ($nota < 2) {
+        return 'reprovado';
+    }
+    if ($nota < 6) {
+        return 'recuperação';
+    }
+    return 'aprovado';
+};
+
+echo $situacao(8);
+?>
+```
+
+Este tipo de função tem um uso bastante importante que é *dentro de outras funções*. Por exemplo, quando se utiliza a função `array_map()`, utilizada para aplicar uma função aos elementos de um array, é muito comum que esta função seja uma função anônima, como mostra o exemplo abaixo:
+```php
+<?php
+$numeros = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144];
+
+$quadrados = array_map(function($num) {
+    return $num * $num;
+}, $numeros);
+?>
+```
 
 # Leitura e escrita de arquivos em PHP
 
