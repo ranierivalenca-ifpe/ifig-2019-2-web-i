@@ -88,7 +88,7 @@ Veja o exemplo a seguir:
 ```php
 <?php
 # ...
-$fp = open('teste.txt', 'w');
+$fp = fopen('teste.txt', 'w');
 for ($i = 0; $i < 10; $i++) {
     fwrite($fp, "linha $i" . PHP_EOL);
 }
@@ -109,7 +109,7 @@ Para ler um arquivo em PHP, precisamos abrir o arquivo em modo de leitura, `r`, 
 ```php
 <?php
 # ...
-$handle = open('teste.txt', 'r');
+$handle = fopen('teste.txt', 'r');
 $conteudo = fread($handle, filesize($handle));
 echo "<pre>$conteudo</pre>";
 # ...
@@ -129,13 +129,13 @@ As implementações destas funções parecem-se com as seguintes:
 ```php
 <?php
 function _file_put_contents($arquivo, $conteudo) {
-    $fp = open($arquivo, 'w');
+    $fp = fopen($arquivo, 'w');
     fwrite($fp, $conteudo);
     fclose($fp);
 }
 
 function _file_get_contents($arquivo) {
-    $fp = open($arquivo, 'r');
+    $fp = fopen($arquivo, 'r');
     $conteudo = fread($fp, filesize($arquivo));
     fclose($fp);
     return $conteudo;
