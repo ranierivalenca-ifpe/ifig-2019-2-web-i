@@ -110,7 +110,7 @@ Para ler um arquivo em PHP, precisamos abrir o arquivo em modo de leitura, `r`, 
 <?php
 # ...
 $handle = fopen('teste.txt', 'r');
-$conteudo = fread($handle, filesize($handle));
+$conteudo = fread($handle, filesize('teste.txt'));
 echo "<pre>$conteudo</pre>";
 # ...
 ?>
