@@ -297,6 +297,9 @@ $sobrenome = $_POST['sobrenome'];
 </ul>
 ```
 
+No exemplo, os dados recebidos no PHP são apenas escritos dentro de um código HTML, mas eles poderiam ser tratados conforme o programador deseje. Tais dados podem ser utilizados para enviar um e-mail, acessar uma outra URL, fazer uma busca num banco de dados ou mesmo podem ser salvos em um arquivo.
+
+Outra forma de enviar dados ao servidor é através de URLs construídas passando dados pelo método `GET`, através de uma *query string* após o caractere `?`. Para saber um pouco mais sobre URLs, veja [este link](https://pt.wikipedia.org/wiki/URL).
 
 # Referências e mais conteúdos
 - https://www.php.net/manual/pt_BR/language.constants.syntax.php
