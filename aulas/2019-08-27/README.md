@@ -7,6 +7,8 @@ Como já dito anteriormente, PHP possui uma série de funções prontas, que sã
 - [dirname](https://www.php.net/manual/pt_BR/function.dirname.php) — Retorna o caminho/path do diretório pai
 - [fclose](https://www.php.net/manual/pt_BR/function.fclose.php) — Fecha um ponteiro de arquivo aberto
 - [fgetcsv](https://www.php.net/manual/pt_BR/function.fgetcsv.php) — Lê uma linha do ponteiro de arquivos e a interpreta como campos CSV
+- [fgets](https://www.php.net/manual/pt_BR/function.fgets.php) — Lê uma linha de um ponteiro de arquivo
+- [fgetss](https://www.php.net/manual/pt_BR/function.fgetss.php) — Ler uma linha de um ponteiro de arquivo e retira as tags HTML
 - [file_exists](https://www.php.net/manual/pt_BR/function.file-exists.php) — Verifica se um arquivo ou diretório existe
 - [file_get_contents](https://www.php.net/manual/pt_BR/function.file-get-contents.php) — Lê todo o conteúdo de um arquivo para uma string
 - [file_put_contents](https://www.php.net/manual/pt_BR/function.file-put-contents.php) — Escreve uma string para um arquivo
@@ -19,6 +21,7 @@ Como já dito anteriormente, PHP possui uma série de funções prontas, que sã
 - [fopen](https://www.php.net/manual/pt_BR/function.fopen.php) — Abre um arquivo ou URL
 - [fputcsv](https://www.php.net/manual/pt_BR/function.fputcsv.php) — Formata a linha como CSV e a escreve em um ponteiro de arquivo
 - [fread](https://www.php.net/manual/pt_BR/function.fread.php) — Leitura binary-safe de arquivo
+- [fseek](https://www.php.net/manual/pt_BR/function.fseek.php) — Procura (seeks) em um ponteiro de arquivo
 - [fwrite](https://www.php.net/manual/pt_BR/function.fwrite.php) — Escrita binary-safe em arquivos
 - [is_dir](https://www.php.net/manual/pt_BR/function.is-dir.php) — Diz se o caminho é um diretório
 - [is_file](https://www.php.net/manual/pt_BR/function.is-file.php) — Informa se o arquivo é um arquivo comum
