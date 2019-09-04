@@ -4,7 +4,7 @@ Como já mostrado anteriormente, para manipular arquivos em PHP (e em basicament
 
 A seguir, serão descritas algumas técnicas que podem ser utilizadas para trabalhar com arquivos em PHP.
 
-#### Lendo o arquivo inteiro
+### Lendo o arquivo inteiro
 
 As formas mais simples de se ler o conteúdo de um arquivo são através das funções `file_get_contents()`, que retornará *todo o conteúdo do arquivo como uma **string***, e através da função `file()`, que colocará cada linha do arquivo em um elemento de um array (incluindo o caractere `\n` (e possivelmente o `\r`)).
 
@@ -28,7 +28,7 @@ while($linha !== false) {
 
 Note neste exemplo o operador `!==`. Este é um operador de **não identidade**, já que PHP diferencia *igualdade* (valores são iguais) de *identidade* (valores E tipos são iguais). Assim, o operador de identidade é `===`. Para mais informações, consulte a [documentação do PHP sobre comparações](https://www.php.net/manual/pt_BR/language.operators.comparison.php), já referenciada em uma aula anterior, ou [esta referência mais rápida sobre operadores em PHP](https://www.w3schools.com/php/php_operators.asp).
 
-#### Escrevendo uma linha no final de um arquivo
+### Escrevendo uma linha no final de um arquivo
 
 Para escrever apenas uma linha num arquivo qualquer, é preciso abri-lo com a função [`fopen()`](https://www.php.net/manual/pt_BR/function.fopen.php) utilizando o modo `a`. Note que este modo é diferente do modo `w` ("*write*"); enquanto este abre o arquivo e **zera seu conteúdo** (ou seja, apaga todo o seu conteúdo), o modo `a` vai abrir o arquivo **mantendo o seu conteúdo** e colocando o **ponteiro** no final do arquivo.
 
@@ -50,7 +50,7 @@ fclose($fp);
 ?>
 ```
 
-#### Escrevendo uma linha no meio de um arquivo (sem sobrescrever o conteúdo)
+### Escrevendo uma linha no meio de um arquivo (sem sobrescrever o conteúdo)
 
 Escrever uma linha no meio de um arquivo é um processo um pouco mais complexo, que envolve a *reescrita de todo o conteúdo do arquivo*. Na verdade isso pode ser um pouco otimizado ([veja esta pergunta no Stack Overflow](https://stackoverflow.com/questions/16813457/php-what-is-the-best-way-to-write-data-to-middle-of-file-without-rewriting-file)), mais ainda assim é um processo mais trabalhoso.
 
@@ -91,7 +91,7 @@ file_put_contents('arquivo.txt', $conteudo);
 ?>
 ```
 
-#### Apagando uma linha de um arquivo
+### Apagando uma linha de um arquivo
 
 Assim como escrever uma linha no meio de um arquivo, apagar uma parte de um arquivo também envolve a reescrita de todo o arquivo. O processo é exatamente o mesmo, exceto que para apagar uma linha é possível simplesmente remover o elemento do array antes de transformá-lo em string, através da função `unset()`. Caso queira manter uma linha em branco, basta substituir seu conteúdo por uma quebra de linha:
 ```php
