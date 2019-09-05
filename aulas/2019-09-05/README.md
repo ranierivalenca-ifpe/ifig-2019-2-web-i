@@ -178,6 +178,7 @@ Sobre as diferenças entre as formas de incluir um arquivo, veja abaixo:
 - `require_once ...;` - mesmo que o `require`, exceto pelo fato de que caso o arquivo já tenha sido incluído, não inclui novamente.
 
 Em resumo:
+
 | Comando | Arquivo não existe | Verifica se já foi incluído |
 | --- | --- | --- |
 | `include` | alerta | não |
