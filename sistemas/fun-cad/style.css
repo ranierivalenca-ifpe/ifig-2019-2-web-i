@@ -1,0 +1,387 @@
+:root {
+    --dark:       hsl(0, 0%, 10%);
+    --dark-gray:  hsl(0, 0%, 30%);
+    --gray:       hsl(0, 0%, 60%);;
+    --light-gray: hsl(0, 0%, 80%);
+    --light:      hsl(0, 0%, 90%);
+    --lighter:    hsl(0, 0%, 96%);
+    --danger:     hsl(0, 80%, 60%);
+    --emphasys:   hsl(240, 100%, 30%);
+
+    --strip-color: var(--dark);
+    /*--strip-bg: hsl(240, 70%, 90%);*/
+    --strip-bg: var(--light-gray);
+
+    --submit-color: var(--light);
+    /*--submit-bg: hsl(240, 70%, 60%);*/
+    --submit-bg: var(--dark);
+
+    --anchor-bg: hsl(240, 90%, 50%);
+    --anchor-color: var(--light);
+}
+
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--dark);
+}
+
+h1, h2 {
+    text-align: center;
+}
+h1 > span {
+    color: var(--emphasys);
+    text-decoration: underline;
+    font-weight: normal;
+}
+body > hr {
+    width: 80%;
+    margin: auto;
+    margin-bottom: .5em;
+}
+table {
+    width: 80vw;
+    margin: auto;
+    border-collapse: collapse;
+}
+tr:not(:first-child):hover {
+    background: var(--lighter);
+}
+td, th {
+    /*border: 1px solid hsl(0, 0%, 50%);*/
+    border-bottom: 1px solid var(--light-gray);
+    border-collapse: collapse;
+    padding: .5em;
+    text-align: left;
+    margin: 0;
+}
+th {
+    border-width: 2px;
+    border-color: var(--gray);
+}
+td:first-of-type, th:first-of-type {
+    padding-left: 0;
+}
+td:last-of-type, th:last-of-type {
+    padding-right: 0;
+}
+/*tr:nth-child(even) {
+    background: var(--strip-bg);
+}
+tr:nth-child(even) td {
+    color: var(--strip-color);
+}*/
+.actions {
+    margin-top: 1em;
+    text-align: center;
+}
+input, select {
+    display: block;
+    font-size: 1em;
+    margin-bottom: .8em;
+    padding: .2em;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--light-gray);
+}
+select {
+    /*border: 1px solid var(--light-gray);*/
+    /*border-radius: 100px;*/
+    background: transparent;
+    padding: 1em;
+}
+label {
+    margin-left: .2em;
+}
+input[type=submit] {
+    font-size: 1.2em;
+    padding: .5em;
+    color: var(--submit-color);
+    background: var(--submit-bg);
+    margin-bottom: .2em;
+}
+input:hover, input:focus {
+    box-shadow: 0 0 .5em hsl(240, 80%, 90%);
+}
+
+fieldset.main-form {
+    padding: 1em;
+    width: 80%;
+    margin: auto;
+    border: .3em solid var(--dark);
+    box-shadow: 0 0 1em var(--light-gray) inset;
+}
+fieldset > .flex-fieldset {
+    display: flex;
+    flex-wrap: wrap;
+}
+fieldset > legend {
+    border: 1px solid var(--dark);
+    background: var(--dark);
+    color: var(--light);
+    padding: .2em 1em;
+}
+.flex-fieldset > fieldset {
+    border: 1px solid var(--dark-gray);
+    padding: 1em;
+    margin: .2em;
+    margin-bottom: .5em;
+}
+.flex-fieldset > fieldset:not(.full) {
+    flex: 1;
+}
+.flex-fieldset > fieldset.full {
+    width: 100%;
+}
+.flex-fieldset > fieldset > legend {
+    padding: .1em 1em;
+    border: 1px solid var(--dark-gray);
+    background: var(--light);
+    color: var(--dark);
+}
+
+a {
+    color: var(--anchor-bg);
+    text-decoration: none;
+    transition: .3s;
+    padding: .3em .6em;
+}
+a:hover {
+    /*color: hsl(240, 100%, 30%);*/
+    color: var(--anchor-color);
+    background: var(--anchor-bg);
+}
+a.del {
+    color: var(--danger);
+}
+a.del:hover {
+    color: var(--light);
+    background: var(--danger);
+}
+
+
+
+.main-options {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    /*align-items: stretch;*/
+    /*align-content: center;*/
+}
+.main-options a {
+    border: 1px solid var(--anchor-bg);
+    display: inline-block;
+    flex: 1;
+    margin-left: .2em;
+    font-size: 1.5em;
+    padding: 1.5em 1em;
+    text-align: center;
+    font-variant: small-caps;
+}
+.main-options a:first-of-type {
+    margin-left: 0;
+}
+.main-options a span {
+    color: inherit;
+    font-weight: bold;
+    font-size: 1.2em;
+    display: block;
+    text-transform: capitalize;
+}
+
+
+
+nav {
+    background: var(--dark);
+    width: 100%;
+    padding: 1em 2em;
+    /*margin-bottom: 1em;*/
+}
+nav a.brand {
+    color: var(--light);
+    letter-spacing: .1em;
+    font-weight: bold;
+    transition: none;
+    font-variant: small-caps;
+    font-size: 1.2em;
+    border: solid var(--light);
+    border-width: 1px 0 1px;
+}
+
+nav a.brand:hover {
+    background: inherit;
+    /*text-decoration: underline;*/
+    text-shadow: 1px 1px 3px var(--light);
+}
+
+
+
+#breadcrumb {
+    background: var(--light);
+    padding: 1em;
+}
+
+#breadcrumb > a, #breadcrumb > span {
+    padding: 0 1em;
+}
+
+#breadcrumb > a > span {
+    font-weight: bold
+}
+
+#breadcrumb a:hover {
+    background: var(--anchor-color);
+    color: var(--anchor-bg);
+    text-decoration: underline;
+}
+
+
+
+
+.alert {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    background: var(--dark-gray);
+    color: var(--light);
+    text-align: center;
+    padding: 1em .5em;
+    font-weight: bold;
+}
+.alert-error {
+    background: var(--danger);
+    color: var(--dark);
+}
+
+
+
+table, form { margin-bottom: 2em; }
+h1 {
+    margin-top: .5em;
+    margin-bottom: .5em;
+    padding-bottom: .5em;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+
+
+#funcionarios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2em;
+    /*border: 1px solid black;*/
+}
+#funcionarios > .no-data {
+    background: var(--light-gray);
+    border: 1px solid var(--dark-gray);
+    padding: 2em;
+    width: 100%;
+    text-align: center;
+}
+#funcionarios > .func {
+    background: var(--light);
+    border: 1px solid var(--dark-gray);
+    margin: 1%;
+    margin-bottom: .2em;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 0 1em var(--light-gray) inset;
+}
+@media(max-width: 880px) {
+    #funcionarios > .func {
+        width: 45%;
+    }
+}
+#funcionarios > .func:hover {
+    box-shadow: 0 0 1em var(--gray) inset;
+    background: var(--light-gray);
+}
+#funcionarios > .func > .info {
+    padding: .5em 1em .5em;
+}
+#funcionarios > .func h2 {
+    font-size: 1.2em;
+}
+#funcionarios > .func h3 {
+    font-size: 1em;
+    margin-top: .2em;
+    font-weight: normal;
+}
+#funcionarios > .func > .actions {
+    padding: 2em;
+    margin-top: 0;
+    padding-top: 0em;
+    padding-bottom: 0;
+    border-top: 1px solid var(--dark-gray);
+}
+#funcionarios > .func > .actions > a {
+    display: block;
+    margin: .1em;
+}
+
+
+
+#dependents {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+}
+
+#dependents table, #dependents form {
+    flex: 1;
+    margin: .5em;
+}
+@media(max-width: 960px) {
+    #dependents table, #dependents form {
+        flex: 100%;
+    }
+}
+
+#dependents .main-form {
+    width: 100%;
+}
+
+
+
+#func-info {
+    margin-bottom: 2em;
+}
+
+#func-info .info {
+    /*display: flex;*/
+    /*justify-content:left;*/
+    align-items: center;
+    border-bottom: 1px solid var(--light);
+    padding-bottom: .3em;
+    padding-top: .3em;
+}
+#func-info .info:first-of-type {
+    padding-top: 0;
+}
+
+#func-info .info:last-of-type {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+#func-info .info .text {
+    /*flex: 1;*/
+    /*text-align: right;*/
+    /*padding-right: 1em;*/
+    display: block;
+    margin-bottom: .2em;
+}
+
+#func-info .info .data {
+    /*flex: 3;*/
+    font-weight: bold;
+    padding-left: 1em;
+}
+
