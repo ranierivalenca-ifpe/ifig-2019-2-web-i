@@ -2,6 +2,10 @@
 <?php require '../functions.php' ?>
 <?php
 $data = get_csv_data(PAR_FILENAME);
+// $message = false;
+// if (isset($_GET['m'])) {
+//     $message = $_GET['m'];
+// }
 $message = $_GET['m'] ?? false;
 ?>
 
@@ -35,7 +39,7 @@ $message = $_GET['m'] ?? false;
             <tr>
                 <td><?= $grau ?></td>
                 <td>
-                    <a href="remove.php?row=<?= $row ?>">&times;</a>
+                    <a href="remove.php?row=<?= $row ?>">&times;</a> <!-- html entities -->
                 </td>
             </tr>
         <?php endforeach ?>

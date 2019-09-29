@@ -1,6 +1,6 @@
 <?php
 define('TITLE', 'Cadastro de Funcionários');
-define('EOL', "\n");
+define('EOL', "\n"); // End Of Line
 
 function data_path($file) {
     $base_path = dirname(__FILE__);

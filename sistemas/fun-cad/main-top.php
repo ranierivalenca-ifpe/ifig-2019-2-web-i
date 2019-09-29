@@ -6,6 +6,9 @@
     <meta charset="UTF-8">
     <?php
     $_title = TITLE;
+    // if (isset($title)) {
+    //     $_title .= " - $title";
+    // }
     if (($title ?? false) !== false) {
         $_title .= " - $title";
     }

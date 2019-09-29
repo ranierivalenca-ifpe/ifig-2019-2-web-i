@@ -23,6 +23,19 @@ function get_funcionarios() {
     $data = [];
     foreach($_data as $row => $func) {
         list($cpf, $nome, $sobrenome, $email, $tel1, $tel2, $cep, $logradouro, $numero, $bairro, $cidade, $estado) = $func;
+        // $cpf = $func[0];
+        // $nome = $func[1];
+        // $sobrenome = $func[2];
+        // $email = $func[3];
+        // $tel1 = $func[4];
+        // $tel2 = $func[5];
+        // $cep = $func[6];
+        // $logradouro = $func[7];
+        // $numero = $func[8];
+        // $bairro = $func[9];
+        // $cidade = $func[10];
+        // $estado = $func[11];
+
         $data[$cpf] = [
             'cpf' => $cpf,
             'nome' => $nome,
