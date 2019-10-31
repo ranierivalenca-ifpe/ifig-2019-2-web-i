@@ -1,0 +1,54 @@
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>oi</h1>
+    <h1>mundo</h1>
+    <a href="http://google.com">Google!</a>
+    <div>
+        <table>
+            <tr class="bg">
+                <th>
+                    <h1>Ola</h1>
+                </th>
+                <th>
+                    <h2>Mundo</h2>
+                </th>
+            </tr>
+        </table>
+    </div>
+    <script>
+        var as = document.querySelectorAll('a');
+        as[0].onclick = function(evt) {
+            alert('vai não');
+            if (!confirm('quer mesmo me deixar?')) {
+                evt.preventDefault();
+            }
+            alert('ta bom, xau. a fila anda.');
+            // return false;
+        }
+
+        // var titulos = document.getElementsByTagName('h1'); // seleção
+        function mudarCor(elmt) {
+            elmt.style.color = `hsl(${Math.random() * 360}, 100%, 30%)`;
+            elmt.style.background = `hsl(${Math.random() * 360}, 100%, 70%)`;
+        }
+        var titulos = document.querySelectorAll('h1');
+        for (i = 0; i < titulos.length; i++) {
+          // titulos[i].innerHTML = `titulo ${i}`;
+          mudarCor(titulos[i]);
+          titulos[i].onmousemove = function(evt) {
+            // console.log(evt.target);
+            mudarCor(evt.target);
+          }
+        }
+        document.getElementsByTagName('body')[0].onclick = function(e) {
+            mudarCor(e.target);
+        }
+    </script>
+</body>
+</html>
