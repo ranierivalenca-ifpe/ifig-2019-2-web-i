@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #modal {
+            display: none;
+            position: absolute;
+            width: 50vw;
+            height: 50vh;
+            top: 25vh;
+            left: 25vw;
+        }
+        #modal div {
+            background: black;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        .blue {
+            background: blue;
+            font-size: 2em;
+        }
+        .red {
+            background: red;
+            font-size: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <div id="modal">
+        <div>
+            <p>
+                Tem certeza que quer excluir <span id="nome">nome</span>?
+            </p>
+            <a id="link-remover" href="">
+                <span class="red">Sim</span>
+            </a>
+            <a id="link-cancelar" href="">
+                <span class="blue">Não</span>
+            </a>
+        </div>
+    </div>
+    <table>
+        <tr>
+            <td>Enola</td>
+            <td>Russum</td>
+            <td><a apa="Enola" class="del" href="/remove.php?id=1">Remover</a></td>
+        </tr>
+        <tr>
+            <td>Su</td>
+            <td>Rosencrantz</td>
+            <td><a apa="Su" class="del" href="/remove.php?id=2">Remover</a></td>
+        </tr>
+        <tr>
+            <td>Kena</td>
+            <td>Ramsay</td>
+            <td><a apa="Kena" class="del" href="/remove.php?id=3">Remover</a></td>
+        </tr>
+        <tr>
+            <td>Leah</td>
+            <td>Forcino</td>
+            <td><a apa="Leah" class="del" href="/remove.php?id=4">Remover</a></td>
+        </tr>
+        <tr>
+            <td>Shirely</td>
+            <td>Tuckett</td>
+            <td><a apa="Shirely" class="del" href="/remove.php?id=5">Remover</a></td>
+        </tr>
+        <tr>
+            <td>Leatrice</td>
+            <td>Romay</td>
+            <td><a apa="Leatrice" class="del" href="/remove.php?id=6">Remover</a></td>
+        </tr>
+        <tr>
+            <td>Karine</td>
+            <td>Costales</td>
+            <td><a apa="Karine" class="del" href="/remove.php?id=7">Remover</a></td>
+        </tr>
+        <tr>
+            <td>Lucila</td>
+            <td>Mcquire</td>
+            <td><a apa="Lucila" class="del" href="/remove.php?id=8">Remover</a></td>
+        </tr>
+        <tr>
+            <td>Casandra</td>
+            <td>Spiller</td>
+            <td><a apa="Casandra" class="del" href="/remove.php?id=9">Remover</a></td>
+        </tr>
+        <tr>
+            <td>Geraldo</td>
+            <td>Fierst</td>
+            <td><a apa="Geraldo" class="del" href="/remove.php?id=10">Remover</a></td>
+        </tr>
+    </table>
+    <script>
+        var modal = document.getElementById('modal');
+        var removeLinks = document.querySelectorAll('a.del');
+        // console.log(removeLinks);
+        // for (i = 0; i < 10; i++)
+        // for (link_idx in removeLinks) {
+        //     console.log(link_idx);
+        // }
+        for (link of removeLinks) {
+            link.addEventListener('click', (evt) => {
+                evt.preventDefault();
+                var t = evt.target;
+                document.getElementById('nome').innerHTML = t.getAttribute('apa');
+                document.getElementById('link-remover')
+                        .setAttribute(
+                            'href',
+                            t.getAttribute('href')
+                        );
+                modal.style.display = "block";
+            });
+        }
+        document.getElementById('link-cancelar').addEventListener('click', (evt) => {
+            evt.preventDefault();
+            modal.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
