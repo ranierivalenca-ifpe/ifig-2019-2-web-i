@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .red {
+            background: hsl(0, 100%, 70%);
+        }
+        .blue {
+            background: hsl(240, 100%, 70%);
+        }
+    </style>
+    <script src="jquery-3.4.1.js"></script>
+</head>
+<body>
+    <h1 class="titulo">Hello 1</h1>
+    <a href="async.html">Clique</a>
+    <a href="async2.html">Clique 2</a>
+    <form>
+        <input type="text" name="cep">
+        <input type="text" name="logradouro">
+        <input type="text" name="localidade">
+    </form>
+    <a href="https://viacep.com.br/ws/53510590/json">github</a>
+    <div id="conteudo"></div>
+    <script>
+        setTimeout(function() {
+            $('.titulo').html('Hello 2').addClass('red');
+            setTimeout(function() {
+                $('.titulo')
+                    .html('Hello 3')
+                    .removeClass('red')
+                    .addClass('blue');
+            }, 2000)
+        }, 2000);
+
+        $('a').on('click', function(evt) {
+            evt.preventDefault();
+            let href = $(evt.target).attr('href');
+            $.get({
+                url: href,
+                success: function(data) {
+                    $('#conteudo').html(data)
+                }
+            })
+        });
+
+        $('input[name=cep]').on('blur', function(evt) {
+            let cep = $(evt.target).val();
+            $.get({
+                url: `https://viacep.com.br/ws/${cep}/json/`,
+                success: function(data) {
+                    $('input[name=logradouro]').val(data.logradouro);
+                    $('input[name=localidade]').val(data.localidade);
+                }
+            })
+        })
+    </script>
+</body>
+</html>
