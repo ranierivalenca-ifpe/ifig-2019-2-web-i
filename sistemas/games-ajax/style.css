@@ -1,0 +1,71 @@
+* {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    color: hsl(0, 0%, 30%);
+}
+body {
+    margin: 2em;
+}
+h1, h2 {
+    text-align: center;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table thead tr, table tbody tr:not(:last-child) {
+    border-bottom: 1px solid hsl(0, 0%, 70%);
+}
+table tr td, table tr th {
+    padding: 1em;
+    text-align: left;
+}
+table tr td[colspan] {
+    text-align: center;
+}
+table tbody tr:hover {
+    background: hsl(0, 0%, 95%);
+}
+.del-game {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: hsl(240, 100%, 70%);
+    padding: .5em;
+}
+.del-game:hover {
+    background: hsl(240, 100%, 70%);
+    color: white;
+}
+
+hr {
+    margin: 2em auto;
+}
+#addPlatform.hide {
+    display: none;
+}
+#addPlatform {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#addPlatform .fade {
+    position: absolute;
+    display: block;
+    background: hsla(0, 0%, 0%, 0.3);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+#addPlatform form {
+    padding: 2em;
+    /*position: absolute;*/
+    z-index: 2;
+    background: hsl(0, 0%, 100%);
+    margin: auto;
+}
