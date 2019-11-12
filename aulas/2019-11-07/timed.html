@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="t"></div>
+    <div id="i"></div>
+    <script>
+        setTimeout(
+            function() {
+                // alert('olatrasado');
+                // window.location = 'http://google.com'
+            }
+            ,
+            3000 // [ja]milissegundos
+        )
+
+        var nome = 'ranieri está com sono';
+        var i = -1;
+        function fn() {
+            document.getElementById('t').innerHTML += nome[++i];
+            if (i < nome.length - 1) {
+                setTimeout(fn, 200);
+            }
+        }
+        fn();
+
+        setInterval(() => {
+            var d = new Date();
+            document.getElementById('i').innerHTML = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}.${d.getMilliseconds()} `;
+        }, 10);
+
+
+
+
+        var obj = {
+            "nome": "ranieri",
+            "idade": 33,
+            "endereco": "...",
+            "filhos": [
+                {
+                    "nome": "Pingo",
+                    "idade": 13,
+                    "raça": "Vira-poodle"
+                },
+                {
+                    "nome": "Toffee",
+                    "idade": "aprx 4",
+                    "raça": "vira qualquer coisa"
+                },
+                {
+                    "nome": "Dandita",
+                    "idade": 2,
+                    "raça": "vira-raposa"
+                }
+            ]
+        }
+
+
+    </script>
+</body>
+</html>
