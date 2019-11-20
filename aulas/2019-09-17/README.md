@@ -17,7 +17,6 @@ Este é um CRUD baseado nos exemplos citados na aula [sobre entidades e relacion
 - **`cpf`**
 - `nome`
 - `sobrenome`
-- `parentesco`
 - *`cpf do funcionário`*
 - *`grau de parentesco`*
 
