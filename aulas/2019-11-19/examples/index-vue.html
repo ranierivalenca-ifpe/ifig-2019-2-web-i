@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="vue.js"></script>
+    <style>
+        #espaco > span {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            background: blue;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app" tabindex="0" v-on:keydown.space="aumentar">
+        Digite alguma coisa: <input type="text" v-model="texto">
+        <div>
+            Você digitou <span>{{ texto.toUpperCase() }}</span>
+        </div>
+
+        Digite quantos elementos quer criar: <input type="number" min="0" max="10" step="1" value="2" v-model="tiros">
+        <a href="#" v-on:click="aumentar">+</a>
+        <div id="espaco">
+            <span v-for="tiro in parseInt(tiros)"></span>
+        </div>
+    </div>
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                texto: '',
+                tiros: 0
+            },
+            methods: {
+                aumentar: function() {
+                    this.tiros = parseInt(this.tiros) + 1;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

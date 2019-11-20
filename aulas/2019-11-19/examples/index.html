@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #espaco > span {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    Digite alguma coisa: <input type="text" id="in">
+    <div>
+        Você digitou <span id="conteudo"></span>
+    </div>
+
+    Digite quantos elementos quer criar: <input type="number" id="quantidade_de_tiros" min="0" max="10" step="1" value="2">
+    <div id="espaco">
+        <span></span>
+        <span></span>
+    </div>
+    <script>
+        var input = document.getElementById('in');
+        var conteudo = document.getElementById('conteudo');
+
+        function atualizar() {
+            conteudo.innerHTML = input.value;
+        }
+
+        input.addEventListener('keyup', function() {
+            atualizar();
+        });
+        input.addEventListener('keydown', function() {
+            atualizar();
+        });
+
+        var num = document.getElementById('quantidade_de_tiros');
+        var espaco = document.getElementById('espaco');
+
+        num.addEventListener('change', function() {
+            var valor = parseInt(num.value);
+
+            // apaga todos os span dentro de #espaco
+            var tiros = document.querySelectorAll('#espaco span');
+            for (tiro of tiros) {
+                tiro.remove();
+            }
+
+            // adiciona ao innerHTML de #spaco elementos span
+            for (i = 0; i < valor; i++) {
+                espaco.innerHTML += '<span></span> ';
+            }
+        });
+    </script>
+</body>
+</html>
