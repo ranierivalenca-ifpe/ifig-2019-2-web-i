@@ -90,8 +90,37 @@ A apresentação principal do dia 17/12 deverá seguir o seguinte formato:
 - Lucas
 - Bruno
 
-#### Pong Especial
+#### ???
 - Pedro Henrique
 - Luana
 - Aline
 - Alisson
+
+#### Runner
+- Vinícius
+- Joan
+- Maria Conceição
+- Josivaldo
+
+#### Xadrez
+- Janaína
+- Geovanne
+- Ricardo
+- Guilherme Gomes
+
+#### Labirinto RPG
+- Luis Henrique
+- Gabriela
+- Maria Eduarda
+- Patrick
+
+#### Corrida Vertical
+- Kauê
+- Mateus
+- Larissa
+- Erinston
+
+#### Corrida Vertical
+- Jackson
+- Johnatan
+- Raquel
